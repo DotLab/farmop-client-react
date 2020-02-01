@@ -8,6 +8,7 @@ import Profile from './components/Profile';
 import TaskPage from './components/TaskPage';
 import NotificationPage from './components/NotificationPage';
 import TaskDetail from './components/TaskDetailPage';
+import IssuePage from './components/IssuePage';
 
 const API_SUCCESS = 'SUCCESS';
 const API_URL = 'http://localhost:3000';
@@ -27,7 +28,7 @@ export default class App extends React.Component {
           <PropsRoute exact path="/profile" component={Profile} app={this}/>
           <PropsRoute exact path="/tasks" component={TaskPage} app={this}/>
           <PropsRoute exact path="/notification" component={NotificationPage} app={this}/>
-          <PropsRoute exact path="/issues" component={TaskPage} app={this}/>
+          <PropsRoute exact path="/issues" component={IssuePage} app={this}/>
           <PropsRoute exact path="/taskid" component={TaskDetail} app={this}/>
 
 

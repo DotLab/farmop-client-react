@@ -25,7 +25,7 @@ export default class Profile extends React.Component {
   render() {
     const {firstName, lastName, level, pp, location, position, workYear, taskNumber, workingHours} = this.state;
 
-    return <div class="Pt(40px) W(80%) Mx(30px) Miw(700px)">
+    return <div class="Pt(40px) W(80%) Mx(30px) Miw(700px) C(white)">
       <div class="D(f) Jc(sb)">
         <div class="D(f)">
           <div class="D(f) Fxd(c) Jc(c) Ai(c) Bds(s) Bdrs(4px) Bdw(1px) Bdc(#ccc) Py(20px) Px(30px)">
@@ -52,11 +52,11 @@ export default class Profile extends React.Component {
           <div class="Fz(16px) My(4px)"><i class="Mend(6px) C(#6a737c) fas fa-history"></i> {position}, {workYear} years</div>
         </div>
       </div>
-      <div class="Mt(40px) W(100) Bdbs(s) Fz(20px)">Recent tasks</div>
+      <div class="Mt(30px) Py(8px) Px(20px) W(100%) Bgc(#b66b13) Fz(20px) C(#fedc63) "><i class="far fa-clone"></i> Recent tasks</div>
+
       <div class="Mt(10px)">
-        <TaskList/>
-        <TaskList/>
-        <NotificationList/>
+        <TaskList type="current"/>
+        <TaskList type="current"/>
       </div>
     </div>;
   }

@@ -15,9 +15,14 @@ export default class NotificationPage extends React.Component {
     const {notification} = this.state;
 
     return <div class="Mx(30px) Miw(500px)">
-      <div class="Pt(40px) W(100) Bdbs(s) Fz(20px)">Notifications</div>
+      <div class="Mt(30px) Py(8px) Px(20px) W(100%) Bgc($green-1) Fz(20px) C($green-3) "><i class="far fa-clone"></i> Unread notifications</div>
       <div class="Mt(10px)">
-        {notification.map((task) => <NotificationList key={task}/>)}
+        {notification.map((task) => <NotificationList key={task} type="unread"/>)}
+      </div>
+
+      <div class="Mt(30px) Py(8px) Px(20px) W(100%) Bgc($blue-1) Fz(20px) C($blue-3)"><i class="far fa-clone"></i> Read notification</div>
+      <div class="Mt(10px)">
+        {notification.map((task) => <NotificationList key={task} type="read"/>)}
       </div>
     </div>;
   }

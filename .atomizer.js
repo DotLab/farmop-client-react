@@ -19,16 +19,26 @@ module.exports = {
         '$gray-900': '#212529',
         '$black':    '#000',
 
-        '$blue-main1': '#218690',
-        '$blue-main2': '#58dbc7',
-        '$yellow-main1': '#e5d947',
-        '$yellow-main2': '#fff467',
-        '$red-main': '#ed4e52',
-        '$red-1': '#ef8c75',
-        '$red-2': '#ef7663',
-        '$red-3': '#ee615a',
-        '$red-4': '#e8555b',
-        '$red-5': '#f24d51',
+        '$blue-1': '#035c6e',
+        '$blue-2': '#3f8994',
+        '$blue-3': '#7db3bd',
+
+        '$green-1': '#406867',
+        '$green-2': '#6fa1a0',
+        '$green-3': '#b9e5d8',
+
+        '$yellow-1': '#e5af2f',
+        '$yellow-2': '#fbce43',
+        '$yellow-3': '#fedc63',
+
+        '$red-1': '#68080c',
+        '$red-2': '#a2362c',
+        '$red-3': '#ec9697',
+
+        '$purple-1': '#391e41',
+        '$purple-2': '#794a80',
+        '$purple-3': '#debce1',
+
 
         '$blue':    '#007bff',
         '$indigo':  '#6610f2',

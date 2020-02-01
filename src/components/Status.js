@@ -335,7 +335,13 @@ function buildOption(title, yData) {
       left: 'center',
     },
     width: '70%',
-    tooltip: {},
+    tooltip: {
+      trigger: 'axis',
+      showContent: true,
+    },
+    dataZoom: [{
+      type: 'inside',
+    }],
     legend: {
       orient: 'vertical',
       right: -40,
@@ -346,12 +352,12 @@ function buildOption(title, yData) {
       data: xData,
     },
     yAxis: {
-      name: 'Amp (A)',
+      // name: 'Amp (A)',
       type: 'value',
     },
     series: [
       {
-        name: 'Fan Current',
+        name: 'A',
         type: 'line',
         animation: false,
         areaStyle: {},
@@ -371,7 +377,13 @@ function buildOption2(title, yData1, yData2) {
       left: 'center',
     },
     width: '70%',
-    tooltip: {},
+    tooltip: {
+      trigger: 'axis',
+      showContent: true,
+    },
+    dataZoom: [{
+      type: 'inside',
+    }],
     legend: {
       orient: 'vertical',
       right: -40,
@@ -383,17 +395,17 @@ function buildOption2(title, yData1, yData2) {
     },
     yAxis: [
       {
-        name: 'Amp (A)',
+        // name: 'Amp (A)',
         type: 'value',
       },
       {
-        name: 'Flow (ft^3/minutes)',
+        // name: 'Flow (ft^3/minutes)',
         type: 'value',
       },
     ],
     series: [
       {
-        name: 'Fan Current',
+        name: 'A',
         type: 'line',
         animation: false,
         areaStyle: {},
@@ -403,7 +415,7 @@ function buildOption2(title, yData1, yData2) {
         data: yData1,
       },
       {
-        name: 'Ventilation',
+        name: 'B',
         type: 'line',
         yAxisIndex: 1,
         animation: false,

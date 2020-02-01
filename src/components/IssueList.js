@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {INFO, DANGER, WAITING} from './utils';
+import {formatDate} from '../utils';
 
 export default class IssueList extends React.Component {
   constructor(props) {
@@ -18,8 +19,8 @@ export default class IssueList extends React.Component {
 
 
   render() {
-    const {title, location, date, status} = this.props;
-    const {type} = this.props;
+    const {title, created, type, location, status} = this.props;
+
     const bgCol = type === 'current' ? '#a2362c' : '#5f3e73';
     const textCol = type === 'current' ? '#ec9697' : '#debce1';
 
@@ -29,7 +30,7 @@ export default class IssueList extends React.Component {
         {type === DANGER && <div class="H(fc) C(#ff0000)"><i class="fas fa-exclamation-triangle"></i></div>}
         <div class="Mstart(10px)">
           <div class="Lh(1.2) Fz(18px) C(white)">{title}</div>
-          <div class="Lh(1.5) Fz(14px) C(#999)"><span class="Mend(14px)" style={{color: textCol}}>Room {location}</span>{date}</div>
+          <div class="Lh(1.5) Fz(14px) C(#999)"><span class="Mend(14px)" style={{color: textCol}}>Room {location}</span>{formatDate(created)}</div>
         </div>
       </div>
       <div class="Fl(end) D(f)">

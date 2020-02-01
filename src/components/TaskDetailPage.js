@@ -7,18 +7,6 @@ export default class TaskDetail extends React.Component {
     super(props);
     this.app = props.app;
 
-    this.state = {
-      type: 'Feeding',
-      status: NEW,
-      level: 3,
-      title: 'Feed the poutry 2kg grains',
-      manager: 'Elise Miller',
-      location: '202',
-      date: '2019-06-01',
-      time: '14:00',
-      totalPP: 5,
-      gainPP: 4,
-    };
 
     this.accept = this.accept.bind(this);
   }
@@ -29,36 +17,41 @@ export default class TaskDetail extends React.Component {
   }
 
   render() {
-    const {type, status, level, title, location, date, time, totalPP} = this.props;
+    const {type, title, level, pp, loc, isCompleted, isDeferred, created, completed, deadline} = this.props;
 
     return <div class="Mx(20px) Py(30px) Px(20px) shadow Ov(a) Miw(500px) C(white) Bgc(#0b304a)">
       <div class="Fz(20px) Fw(600)">{title}</div>
       <span class="badge badge-pill badge-secondary">L{level}</span>
-      <span class="badge badge-pill badge-secondary Bgc(#ffcc22) Mstart(10px)">{totalPP}pp</span>
-      <span class="Mstart(20px) Fz(14px)">Create on {date}</span>
+      <span class="badge badge-pill badge-secondary Bgc(#ffcc22) Mstart(10px)">{pp}pp</span>
+      <span class="Mstart(20px) Fz(14px)">Create on {created}</span>
       <div class="Mt(10px) Fz(16px)">
-        Feed the poutry 2kg grains
+        {title}
       </div>
-      <div class="D(f)">
-        {/* <div class="Mt(20px)"> Location
-          <div><i class="Mend(6px) fas fa-compass"></i> {location}</div>
-        </div> */}
-        <div class="Mt(20px) Mstart(40px)"> Complete by
-          <div><i class="fas fa-clock"></i> {time}</div>
+      <div class="D(f) Mt(20px)">
+        {/* <div class="Mt(20px)"> Location <i class="Mend(6px) fas fa-compass"></i> {location}</div> */}
+        <div class="">
+          Location
+          <div><i class="Mend(6px) fas fa-compass"></i> {loc}</div>
         </div>
+        {isCompleted && <div class="Mstart(40px)"> Complete by
+          <div><i class="fas fa-clock"></i> {deadline}</div>
+        </div>}
+        {!isCompleted && <div class="Mstart(40px)"> Completed by
+          <div><i class="fas fa-clock"></i> {completed}</div>
+        </div>}
 
       </div>
-      {status === NEW && <div class="Mt(20px) Fl(end)">
+      {!isDeferred && <div class="Mt(20px) Fl(end)">
         <button onClick={this.accept} class="btn btn-outline-primary">Accept</button>
         <button class="btn btn-primary Mstart(20px)">Defer</button>
       </div>}
 
-      {status !== NEW && type === 'Feeding' && <div class="Mt(20px) Fl(end)">
+      {!isDeferred && type === 'Feeding' && <div class="Mt(20px) Fl(end)">
         <button class="btn btn-success">Completed</button>
         <button class="btn btn-primary Mstart(20px)">Defer</button>
       </div>}
 
-      {status !== NEW && type === 'Fixing' && <div class="Mt(20px) Fl(end)">
+      {!isDeferred && type === 'Fixing' && <div class="Mt(20px) Fl(end)">
         <button class="btn btn-warning C(white)">Need specialists</button>
         <button class="btn btn-success Mstart(20px)">Completed</button>
         <button class="btn btn-primary Mstart(20px)">Defer</button>

@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {formatDate} from '../utils';
 
 export default class TaskList extends React.Component {
   constructor(props) {
@@ -9,9 +10,9 @@ export default class TaskList extends React.Component {
 
 
   render() {
-    const {level, title, location, deadline, pp} = this.props;
+    const {type, title, level, pp, loc, isCompleted, isDeferred, created, completed, deadline} = this.props;
     const percentage = (pp / pp).toFixed(4) * 100;
-    const {type} = this.props;
+
     const bgCol = type === 'current' ? '#e5af2f' : '#917260';
     const textCol = type === 'current' ? '#fedc63' : '#e4d9c5';
 
@@ -21,7 +22,7 @@ export default class TaskList extends React.Component {
           <div class="H(fc) badge badge-pill badge-secondary">L{level}</div>
           <div class="Mstart(10px)">
             <div class="Lh(1.2) Fz(18px) C(white)">{title}</div>
-            <div class="Lh(1.5) Fz(14px) C(#e4d9c5)"><span class="Mend(14px)" style={{color: textCol}}>Room {location}</span>{deadline}</div>
+            <div class="Lh(1.5) Fz(14px) C(#e4d9c5)"><span class="Mend(14px)" style={{color: textCol}}>Room {loc}</span>{formatDate(deadline)}</div>
           </div>
         </div>
         <div class="Fl(end) D(f)">

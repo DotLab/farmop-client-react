@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {ACCEPTED, NEW, COMPLETED, DEFERRED} from './utils';
+import {formatDate} from '../utils';
 
 export default class TaskDetail extends React.Component {
   constructor(props) {
@@ -28,13 +29,13 @@ export default class TaskDetail extends React.Component {
         {title}
       </div>
       <div class="D(f) Mt(20px)">
-        {/* <div class="Mt(20px)"> Location <i class="Mend(6px) fas fa-compass"></i> {location}</div> */}
+
         <div class="">
           Location
           <div><i class="Mend(6px) fas fa-compass"></i> {loc}</div>
         </div>
         {isCompleted && <div class="Mstart(40px)"> Complete by
-          <div><i class="fas fa-clock"></i> {deadline}</div>
+          <div><i class="fas fa-clock"></i> {formatDate(deadline)}</div>
         </div>}
         {!isCompleted && <div class="Mstart(40px)"> Completed by
           <div><i class="fas fa-clock"></i> {completed}</div>

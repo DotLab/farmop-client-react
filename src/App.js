@@ -141,6 +141,186 @@ import echarts from 'echarts';
   echarts.registerTheme('dark', theme);
 })(echarts);
 
+const currentTasks = [
+  {
+    title: 'Distribute feed to Area H8',
+    description: 'Distribute feed to Area H8 using the material from Feed Container E1.',
+    level: 'Lv1',
+    pp: '+5',
+    location: 'Area H8',
+    isCompleted: false,
+    isDeferred: false,
+    created: new Date(),
+    completed: new Date(),
+    deadline: new Date(),
+  },
+  {
+    title: 'Check the abnormality in Fan #2 of Area H7',
+    description: 'See if the abnormality can be easily fixed. If it cannot be fixed, please marked the task as Unresolved.',
+    level: 'Lv2',
+    pp: '+6',
+    location: 'Area H7',
+    isCompleted: false,
+    isDeferred: false,
+    created: new Date(),
+    completed: new Date(),
+    deadline: new Date(),
+  },
+];
+const pastTasks = [
+  {
+    title: 'Clean enclosures in Area H6',
+    level: 'Lv2',
+    pp: '+6',
+    location: 'Area H6',
+    isCompleted: true,
+    isDeferred: false,
+    created: new Date(),
+    completed: new Date(),
+    deadline: new Date(),
+  },
+  {
+    title: 'Clean enclosures in Area H8',
+    level: 'Lv2',
+    pp: '+6',
+    location: 'Area H8',
+    isCompleted: true,
+    isDeferred: false,
+    created: new Date(),
+    completed: new Date(),
+    deadline: new Date(),
+  },
+  {
+    title: 'Clean enclosures in Area H9',
+    level: 'Lv2',
+    pp: '+6',
+    location: 'Area H9',
+    isCompleted: true,
+    isDeferred: false,
+    created: new Date(),
+    completed: new Date(),
+    deadline: new Date(),
+  },
+  {
+    title: 'Restock enclosures with young birds in Area H6',
+    level: 'Lv1',
+    pp: '+3',
+    location: 'Area H6',
+    isCompleted: true,
+    isDeferred: false,
+    created: new Date(),
+    completed: new Date(),
+    deadline: new Date(),
+  },
+  {
+    title: 'Restock enclosures with young birds in Area H8',
+    level: 'Lv1',
+    pp: '+3',
+    location: 'Area H8',
+    isCompleted: true,
+    isDeferred: false,
+    created: new Date(),
+    completed: new Date(),
+    deadline: new Date(),
+  },
+  {
+    title: 'Restock enclosures with young birds in Area H9',
+    level: 'Lv1',
+    pp: '+3',
+    location: 'Area H8',
+    isCompleted: true,
+    isDeferred: false,
+    created: new Date(),
+    completed: new Date(),
+    deadline: new Date(),
+  },
+];
+
+const unreadNotifications = [
+  {
+    title: 'Temperature rises 5 degrees in Area H3',
+    location: 'Area H3',
+    created: new Date(),
+  },
+  {
+    title: 'Temperature rises 6 degrees in Area H6',
+    location: 'Area H6',
+    created: new Date(),
+  },
+  {
+    title: 'Temperature rises 8 degrees in Area H7',
+    location: 'Area H7',
+    created: new Date(),
+  },
+  {
+    title: 'CO2 level is too low in Area H8',
+    location: 'Area H8',
+    created: new Date(),
+  },
+  {
+    title: 'Feed is potentially blocked in Feeder W3',
+    location: 'Feeder W3',
+    created: new Date(),
+  },
+  {
+    title: 'Good morning',
+    location: 'Control Center',
+    created: new Date(),
+  },
+];
+const readNotifications = [
+  {
+    title: 'Thanks for your good work today',
+    location: 'Control Center',
+    created: new Date(),
+  },
+  {
+    title: 'Humidity falls 5% in Area H8',
+    location: 'Area H8',
+    created: new Date(),
+  },
+  {
+    title: 'Humidity falls 5% in Area H6',
+    location: 'Area H6',
+    created: new Date(),
+  },
+  {
+    title: 'Humidity falls 6% in Area H9',
+    location: 'Area H9',
+    created: new Date(),
+  },
+  {
+    title: 'The Temperature rises 8 degrees in Area H7',
+    location: 'Area H7',
+    created: new Date(),
+  },
+  {
+    title: 'Feed level too low in Feed Container W3',
+    location: 'Feed Container W3',
+    created: new Date(),
+  },
+  {
+    title: 'Feed level too low in Feed Container W2',
+    location: 'Feed Container W2',
+    created: new Date(),
+  },
+];
+
+const currentIssues = [
+  {
+    title: 'Light potentially broke in Area H8',
+    location: 'Area H8',
+    created: new Date(),
+  },
+];
+const fixedIssues = [
+  {
+    title: 'Fan potentially broke in Feed Container W1',
+    location: 'Feed Container W1',
+    created: new Date(),
+  },
+];
+
 const API_SUCCESS = 'SUCCESS';
 const API_URL = 'http://localhost:3000';
 

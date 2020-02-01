@@ -18,7 +18,8 @@ export default class TaskDetail extends React.Component {
   }
 
   render() {
-    const {type, title, level, pp, loc, isCompleted, isDeferred, created, completed, deadline} = this.props;
+    const {type, title, level, pp, loc, isDeferred, created, completed, deadline} = this.props;
+    const isCompleted = false;
 
     return <div class="Mx(20px) Py(30px) Px(20px) shadow Ov(a) Miw(500px) C(white) Bgc(#0b304a)">
       <div class="Fz(20px) Fw(600)">{title}</div>
@@ -26,7 +27,7 @@ export default class TaskDetail extends React.Component {
       <span class="badge badge-pill badge-secondary Bgc(#ffcc22) Mstart(10px)">{pp}pp</span>
       <span class="Mstart(20px) Fz(14px)">Create on {created}</span>
       <div class="Mt(10px) Fz(16px)">
-        {title}
+        Check if there are any ill chicken in Area H8
       </div>
       <div class="D(f) Mt(20px)">
 

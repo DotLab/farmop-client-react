@@ -11,8 +11,8 @@ export default class TaskPage extends React.Component {
   render() {
     const currentTasks = [
       {
-        title: 'Distribute feed to Area H8',
-        description: 'Distribute feed to Area H8 using the material from Feed Container E1.',
+        title: 'Check chicken sick in Area H8',
+        description: 'Check if there are any ill chicken in Area H8',
         level: 'Lv1',
         pp: '+5',
         location: 'Area H8',

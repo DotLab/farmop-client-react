@@ -341,7 +341,7 @@ export default class App extends React.Component {
           <PropsRoute exact path="/tasks" component={TaskPage} app={this}/>
           <PropsRoute exact path="/notification" component={NotificationPage} app={this}/>
           <PropsRoute exact path="/issues" component={IssuePage} app={this}/>
-          <PropsRoute exact path="/taskid" component={TaskDetail} app={this} type="info" status="new" level="2" title="Check chicken sick" location="385" date="2020-01-17" time="14:00" totalPP="12"/>
+          <PropsRoute exact path="/taskid" component={TaskDetail} app={this} type="info" status="new" level="2" title="Check chicken sick" loc="385" date="2020-01-17" time="14:00" totalPP="12"/>
 
 
         </Switch>

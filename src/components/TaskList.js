@@ -21,8 +21,8 @@ export default class TaskList extends React.Component {
     const {level, title, location, date, totalPP, gainPP} = this.state;
     const percentage = (gainPP / totalPP).toFixed(4) * 100;
     const {type} = this.props;
-    const bgCol = type === 'current' ? '#5a8d88' : '#3f8994';
-    const textCol = type === 'current' ? '#b9e5d8' : '#7db3bd';
+    const bgCol = type === 'current' ? '#e5af2f' : '#917260';
+    const textCol = type === 'current' ? '#fedc63' : '#e4d9c5';
 
     return <div>
       <Link to="/taskid" class="Td(n):h D(f) Ai(c) Jc(sb) Py(4px) Px(12px) Bgc(#207561) Bdrs(8px) Mb(10px) Op(0.8):h" style={{backgroundColor: bgCol}}>
@@ -30,7 +30,7 @@ export default class TaskList extends React.Component {
           <div class="H(fc) badge badge-pill badge-secondary">L{level}</div>
           <div class="Mstart(10px)">
             <div class="Lh(1.2) Fz(18px) C(white)">{title}</div>
-            <div class="Lh(1.5) Fz(14px) C(#ccc)"><span class="Mend(14px)" style={{color: textCol}}>Room {location}</span>{date}</div>
+            <div class="Lh(1.5) Fz(14px) C(#e4d9c5)"><span class="Mend(14px)" style={{color: textCol}}>Room {location}</span>{date}</div>
           </div>
         </div>
         <div class="Fl(end) D(f)">

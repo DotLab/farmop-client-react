@@ -18,13 +18,19 @@ export default class TaskPage extends React.Component {
 
     return <div class="Mx(30px) Miw(500px)">
       <div class="Mt(30px) Py(8px) Px(20px) W(100%) Bgc(#b66b13) Fz(20px) C(#fedc63) "><i class="far fa-clone"></i> Current tasks</div>
-      <div class="Bgc(#0b304a) Pt(10px) Pb(6px) Px(10px)">
-        {currentTasks.map((task) => <TaskList key={task} type="current"/>)}
+      <div class="Mt(10px)">
+        {/* {currentTasks.map((task) => <TaskList key={task} type="current"/>)} */}
+        <TaskList level="1" title="Distributing feed" location="374" date="2020-01-20" totalPP="12" gainPP="10"/>
+        <TaskList level="2" title="Ensuring proper ventilation" location="385" date="2020-01-17" totalPP="12" gainPP="10"/>
+
       </div>
 
       <div class="Mt(30px) Py(8px) Px(20px) W(100%) Bgc(#5a3a3f) Fz(20px) C(#e4d9c5)"><i class="far fa-clone"></i> Past tasks</div>
-      <div class="Bgc(#0b304a) Pt(10px) Pb(6px) Px(10px)">
-        {pastTasks.map((task) => <TaskList key={task}/>)}
+      <div class="Mt(10px)">
+        {/* {pastTasks.map((task) => <TaskList key={task}/>)} */}
+        <TaskList level="1" title="Distributing feed" location="374" date="2020-01-20" totalPP="12" gainPP="10"/>
+        <TaskList level="1" title="Ensuring proper ventilation" location="385" date="2020-01-17" totalPP="12" gainPP="10"/>
+
       </div>
     </div>;
   }

@@ -5,20 +5,11 @@ export default class TaskList extends React.Component {
   constructor(props) {
     super(props);
     this.app = props.app;
-
-    this.state = {
-      level: 3,
-      title: 'Feed the poutry 2kg grains',
-      location: '202',
-      date: '3 hr ago',
-      totalPP: 5,
-      gainPP: 4,
-    };
   }
 
 
   render() {
-    const {level, title, location, date, totalPP, gainPP} = this.state;
+    const {level, title, location, date, totalPP, gainPP} = this.props;
     const percentage = (gainPP / totalPP).toFixed(4) * 100;
     const {type} = this.props;
     const bgCol = type === 'current' ? '#e5af2f' : '#917260';

@@ -1,0 +1,12 @@
+export const STATUS = 'status';
+export const PROFILE = 'profile';
+export const TASK = 'task';
+export const NOTIFICATION = 'notification';
+export const ISSUE = 'issue';
+export const INFO = 'info';
+export const DANGER = 'danger';
+export const WAITING = 'Waiting';
+export const NEW = 'New';
+export const ACCEPTED = 'Accepted';
+export const DEFERRED = 'Deferred';
+export const COMPLETED = 'Completed';

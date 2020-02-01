@@ -40,7 +40,7 @@ export default class IssuePage extends React.Component {
 
       <div class="Mt(30px) Py(8px) Px(20px) W(100%) Bgc($purple-1) Fz(20px) C($purple-3)"><i class="far fa-clone"></i> Past issues</div>
       <div class="Mt(10px)">
-        {fixedIssues.map((task) => <IssueList key={task} type="past"/>)}
+        {fixedIssues.map((task) => <IssueList key={task} title={task.title} location={task.location} created={task.created} type="past"/>)}
       </div>
     </div>;
   }

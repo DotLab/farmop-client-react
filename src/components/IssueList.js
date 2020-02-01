@@ -18,7 +18,7 @@ export default class IssueList extends React.Component {
 
 
   render() {
-    const {title, location, date, status} = this.state;
+    const {title, location, date, status} = this.props;
     const {type} = this.props;
     const bgCol = type === 'current' ? '#a2362c' : '#5f3e73';
     const textCol = type === 'current' ? '#ec9697' : '#debce1';

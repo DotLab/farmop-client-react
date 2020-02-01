@@ -16,7 +16,7 @@ export default class NotificationList extends React.Component {
 
 
   render() {
-    const {title, location, date} = this.state;
+    const {title, location, date} = this.props;
     const {type, status} = this.props;
     const bgCol = status === 'unread' ? '#6fa1a0' : '#3f8994';
     const textCol = status === 'unread' ? '#b9e5d8' : '#7db3bd';

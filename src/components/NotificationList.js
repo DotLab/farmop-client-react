@@ -27,7 +27,7 @@ export default class NotificationList extends React.Component {
         {type === DANGER && <div class="H(fc) C($red-1)"><i class="fas fa-exclamation-triangle"></i></div>}
         <div class="Mstart(10px)">
           <div class="Lh(1.2) Fz(18px) C(white)">{title}</div>
-          {/* <div class="Lh(1.5) Fz(14px) C(#999)"><span class="Mend(14px)" style={{color: textCol}}>Room {location}</span>{created}</div> */}
+          <div class="Lh(1.5) Fz(14px) C(white)"><span class="Mend(14px)" style={{color: textCol}}> {location}</span>{created}</div>
         </div>
       </div>
     </div>;

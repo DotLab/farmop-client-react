@@ -25,10 +25,17 @@ export default class IssuePage extends React.Component {
     ];
     const fixedIssues = [
       {
-        title: 'Fan potentially broke in Feed Container W1',
+        title: 'Fan amp is unusually high in Feed Container W1',
         location: 'Feed Container W1',
         created: new Date(),
       },
+      {
+        title: 'Fan potentially broke in Area H8',
+        location: 'Feed Container W1',
+        created: new Date(),
+      },
+
+
     ];
 
 

@@ -28,9 +28,7 @@ function buildOption2(title) {
       },
       {
         name: 'Flow (ft^3/minutes)',
-        nameLocation: 'start',
         type: 'value',
-        inverse: true,
       },
     ],
     series: [
